@@ -43,7 +43,7 @@ public class NewsAdapter extends ArrayAdapter<News> {
     public View getView(int position, View convertView, ViewGroup parent) {
         News news = getItem(position);
         View view;
-        if (convertView != null) {
+        if (convertView == null) {
             view = LayoutInflater.from(getContext()).inflate(resourceId, null);
         } else {
             view = convertView;
