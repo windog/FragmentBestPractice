@@ -32,7 +32,7 @@ public class NewsTitleFragment extends Fragment implements AdapterView.OnItemCli
     public void onAttach(Activity activity) {
         super.onAttach(activity);
         newsList = getNews();  //获取新闻，数据源即从这里来
-        adapter = new NewsAdapter(activity, R.layout.news_title_frag, newsList);
+        adapter = new NewsAdapter(activity, R.layout.news_item, newsList);   //这里错了，adapter 需要的是Listview子项布局ID
     }
 
     @Nullable
